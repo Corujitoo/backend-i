@@ -117,16 +117,29 @@ wheels = [
 ]
 
 [[package]]
+name = "run"
+version = "0.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7b/dd/be134411d3f2bf7e216e37d7136ed6bae74f06dc1683d929c5ca9bfcdb3c/run-0.3.tar.gz", hash = "sha256:4fedf927ccee02e797912af574d31a6d394073716db6864beb2bb75e05df3f36", size = 4412, upload-time = "2025-12-09T10:18:51.283Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e1/5d/f831e942a2ed684564bd099ac22f5e8ae0e9cbf45814f471565248ec875b/run-0.3-py3-none-any.whl", hash = "sha256:93600874ef1f7de3b178efe6607db32afb4ff45acdf640c76bbed851f6494a60", size = 5143, upload-time = "2025-12-09T10:18:50.431Z" },
+]
+
+[[package]]
 name = "session3"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "run" },
     { name = "typer", version = "0.23.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "typer", version = "0.24.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "typer", specifier = ">=0.23.2" }]
+requires-dist = [
+    { name = "run", specifier = ">=0.3" },
+    { name = "typer", specifier = ">=0.23.2" },
+]
 
 [[package]]
 name = "shellingham"

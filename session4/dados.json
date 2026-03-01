@@ -1,0 +1,14 @@
+{
+  "ficheiros": [
+    {
+      "nome": "main.py",
+      "pasta": "session4",
+      "tipo": "python"
+    },
+    {
+      "nome": "README.md",
+      "pasta": "session4",
+      "tipo": "markdown"
+    }
+  ]
+}
