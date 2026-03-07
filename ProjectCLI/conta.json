@@ -10,5 +10,35 @@
         "descricao": "gas",
         "valor": 11111.0,
         "data_hora": "2026-03-07T11:35:01.278088+00:00"
+    },
+    {
+        "tipo": "entrada",
+        "descricao": "pagamento",
+        "valor": 2000.0,
+        "data_hora": "2026-03-07T15:49:15.933961+00:00"
+    },
+    {
+        "tipo": "saida",
+        "descricao": "gas",
+        "valor": 1500.0,
+        "data_hora": "2026-03-07T15:49:39.203307+00:00"
+    },
+    {
+        "tipo": "entrada",
+        "descricao": "salario",
+        "valor": 2000.0,
+        "data_hora": "2026-03-07T17:09:57.910420+00:00"
+    },
+    {
+        "tipo": "entrada",
+        "descricao": "salario",
+        "valor": 2000.0,
+        "data_hora": "2026-03-07T17:10:18.571731+00:00"
+    },
+    {
+        "tipo": "entrada",
+        "descricao": "gas",
+        "valor": 1000.0,
+        "data_hora": "2026-03-07T17:10:56.210374+00:00"
     }
 ]
