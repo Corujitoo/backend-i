@@ -1,0 +1,27 @@
+import typer
+from app.services.meeting_service import create_meeting, list_meetings
+from app.core.errors import ValidationError
+from app.core.validators import validate_iso_date
+
+app = typer.Typer()
+
+
+@app.command("create-meeting")
+def create_meeting_cmd(title: str, date: str, owner: str) -> None:
+    try:
+        validate_iso_date(date)
+    except ValidationError as exc:
+        typer.echo(f"Validation error: {exc}")
+        raise typer.Exit(code=2)
+    meeting = create_meeting(title, date, owner)
+    typer.echo(f"Created: {meeting.id}")
+
+
+@app.command("list-meetings")
+def list_meetings_cmd() -> None:
+    for m in list_meetings():
+        typer.echo(f"{m.id} | {m.date} | {m.title}")
+
+
+if __name__ == "__main__":
+    app()
